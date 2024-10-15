@@ -26,6 +26,18 @@ app.get('/', async (req, res) => {
   res.send('Welcome in aws server');  
 });
 
+app.get('/list', async (req, res) => {
+    const data = [{
+        name : "Balvant Singh",
+        Designation : "Senior Software Developer"
+    },
+    {
+        name : "Dipanshu Gupta",
+        Designation : "Tech Lead"
+    }]
+    res.json({status:true, data});  
+  });
+
 app.use(function (err, req, res, next) {
 console.error("---",err.message)
 res.status(500).send('Something went wrong! '+err.message)
