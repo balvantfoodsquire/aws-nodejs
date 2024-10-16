@@ -34,6 +34,9 @@ app.get('/list', async (req, res) => {
     {
         name : "Dipanshu Gupta",
         Designation : "Tech Lead"
+    },{
+        name : "Akhilesh",
+        Designation : "Mobile Tech Lead"
     }]
     res.json({status:true, data});  
   });
